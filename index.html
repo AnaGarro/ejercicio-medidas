@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de medidas en css</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="fondotitulo">
+        <h1>Uso de medidas en CSS</h1>
+        </div>
+        <p>Hay dos tipos de unidades de medidas para trabajar en CSS: absolutas y relativas</p>
+    </header>
+    <main>
+        <section>
+            <h2>Medidas absolutas</h2>
+
+            <p>Las unidades de medidas absolutas son fijas. No cambian y siempre mantendrán su tamaño independientemente del dispositivo o la interacción del usuario.
+            </p>
+            
+            <p>
+            No se recomienda el uso de unidades de medidas absolutas en la pantalla, porque los tamaños de pantalla varían mucho. Sin embargo, se pueden utilizar si se conoce el medio de salida, como para el diseño de impresión.
+            </p> 
+            
+            
+            <table id="absoluta">
+                <tr class="rosa">
+                    <th>Unidad</th>
+                    <th>Descripción</th>
+                    <th colspan="2">Observación</th>
+                </tr>
+                
+                <tr>
+                    <td>cm</td>
+                    <td>centímetros</td>
+                    <td>Rara vez utilizada</td>
+                   
+                </tr>
+                
+                <tr class="rosa">
+                    <td>mm</td>
+                    <td>milímetros</td>
+                    <td>Rara vez utilizada</td>
+                </tr>
+                
+                <tr>
+                    <td>in</td>
+                    <td>pulgadas (1in = 96px = 2.54cm)</td>
+                    <td>Rara vez utilizada</td>
+                </tr>
+        
+                <tr class="rosa">
+                    <td>px</td>
+                    <td>pixeles (1px = 1/96th of 1in)</td>
+                    <td> Medida absoluta más utilizada, se recomienda para trabajar con imágenes.</td>
+                    <td></td>
+                </tr>
+
+
+                <tr>
+                    <td>pt</td>
+                    <td>puntos (1pt = 1/72 of 1in)</td>
+                    <td>Rara vez utilizada</td>
+
+                </tr>
+                
+                <tr  class="rosa">
+                    <td>pc</td>
+                    <td>picas (1pc = 12 pt)</td>
+                    <td>Rara vez utilizada</td>
+                </tr>
+            </table>
+            <p>
+            Vale aclarar que los píxeles (px) son relativos al dispositivo de visualización. Para dispositivos de bajo ppp, 1 px es un píxel (punto) del dispositivo de la pantalla. Para impresoras y pantallas de alta resolución, 1 px implica varios píxeles del dispositivo.
+            </p>
+
+        </section>
+
+        <section>
+            <h2>Medidas relativas</h2>
+            <p>
+            Las unidades de medidas relativas siempre  dependen de un contexto, son las que se recomienda utilizar en la mayoría de ocaciones porque nos van a permitir que todos los elementos escalen proporcionalmente. Las unidades de medida relativa escalan mejor entre diferentes medios de renderizado. 
+            </p>
+            <table id="relativa">
+                <tr>
+                    <th>Unidad</th>
+                    <th>Descripción</th>
+                    <th colspan="2">Observación</th>
+                </tr>
+                
+                <tr>
+                    <td>em</td>
+                    <td>
+                    Relativa al tamaño de fuente del elemento en el que son usadas (2em significa 2 veces el tamaño de la fuente actual)
+                    </td>
+                    <td>
+                    Éste tamaño de la fuente es influenciado por la herencia de elementos padre a menos que explícitamente se sobreescriban con una unidad no sujeta a herencia.
+                    </td>
+                   
+                </tr>
+                
+                <tr class="verde">
+                    <td>ex</td>
+                    <td> Relativa al alto de la fuente actual</td>
+                    <td>Rara vez utilizada</td>
+                    <td></td>
+                </tr>
+                
+                <tr>
+                    <td>ch</td>
+                    <td>Relativa al width de "0"</td>
+                    <td>Rara vez utilizada</td>
+                </tr>
+        
+                <tr class="verde">
+                    <td>rem</td>
+                    <td>Relativa al tamaño de fuente del elemento raiz (el html)</td>
+                    <td>Éste tamaño de fuente es influenciado por la herencia del ajsute del tamaño de fuente del navegador a menos de que explícitamente se sobreescriba con una unidad no sujeta a herencia.</td>
+                </tr>
+
+
+                <tr>
+                    <td>vw</td>
+                    <td>Relativa al 1% del ancho del viewport (el tamaño de la ventana gráfica)</td>
+                    <td></td>
+
+
+                </tr>
+                
+                <tr class="verde">
+                    <td>vh</td>
+                    <td>Relativa al 1% del alto del viewport (el tamaño de la ventana gráfica)</td>
+                    <td></td>  
+                </tr>
+                
+                <tr>
+                    <td>vmin</td>
+                    <td>En relación con el 1% de la dimensión más pequeña de la ventanilla</td>
+                    <td></td>
+                </tr>
+
+                <tr class="verde"> 
+                    <td>vmax</td>
+                    <td>En relación con el 1% de la dimensión más grande de la ventanilla</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>%</td>
+                    <td>Relativa a la medida del elemento padre</td>
+                    <td></td>
+                </tr>
+            </table>
+    <div class="conclusion">
+    <p>
+        Conclusión: Usar unidades em y rem nos da flexibilidad en nuestros diseños, y la capacidad de escalar elementos hacia arriba y hacia abajo, en lugar de estar estancados en tamaños fijos. Podemos usar ésta flexibilidad para hacer nuestros diseños más fáciles de ajustar durante el desarrollo, más responsivo, y para permitir a usuarios de navegador controlar la escala general de sitios para máxima legibilidad.
+        </p>
+        <p>
+        La diferencia entre las unidades em y rem es como el navegador determina el valor px al  que se están traduciendo. Entender ésta diferencia es la clave para determinar cuando usar cada unidad.
+        </p>
+    </div>
+            
+        </section>
+    
+    </main>
+</body>
+</html>
